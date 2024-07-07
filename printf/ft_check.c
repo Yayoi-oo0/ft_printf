@@ -6,7 +6,7 @@
 /*   By: oyayoi <oyayoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 17:40:34 by oyayoi            #+#    #+#             */
-/*   Updated: 2024/06/30 17:58:24 by oyayoi           ###   ########.fr       */
+/*   Updated: 2024/07/07 18:24:17 by oyayoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_check(const char *str, va_list args)
 			i++;
 			count
 		}
-			
+		ft_putchar(*str);	
 	}
 }
 
