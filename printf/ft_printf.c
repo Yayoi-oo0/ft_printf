@@ -6,7 +6,7 @@
 /*   By: oyayoi <oyayoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 12:22:39 by oyayoi            #+#    #+#             */
-/*   Updated: 2024/06/25 17:28:17 by oyayoi           ###   ########.fr       */
+/*   Updated: 2024/07/12 13:01:17 by oyayoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int	ft_printf(const char *str, ...)
 {
 	va_list		args;
-	const char	*ptr;
 	int			i;
 
 	i = 0;

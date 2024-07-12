@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okamotoyayoi <okamotoyayoi@student.42.f    +#+  +:+       +#+        */
+/*   By: oyayoi <oyayoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 12:30:00 by oyayoi            #+#    #+#             */
-/*   Updated: 2024/07/10 13:18:30 by okamotoyayo      ###   ########.fr       */
+/*   Updated: 2024/07/12 15:01:48 by oyayoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,11 @@
 
 int	ft_printf(const char *str, ...);
 int	ft_check(const char *str, va_list args);
-int	ft_divide(const char *str, va_list args);
-int	ft_putchar(char c);
+int	ft_divide(int str, va_list args);
+int	ft_putstr(char *str);
+int	ft_putptr(unsigned long long ptr);
+int	ft_putnbr(int n);
+int	ft_putunbr(unsigned int n);
+int	ft_puthex(unsigned int n, int upper);
 
 #endif

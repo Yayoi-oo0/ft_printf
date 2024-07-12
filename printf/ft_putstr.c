@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_char.c                                    :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oyayoi <oyayoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/28 16:27:52 by oyayoi            #+#    #+#             */
-/*   Updated: 2024/05/28 16:28:36 by oyayoi           ###   ########.fr       */
+/*   Created: 2024/07/12 13:24:59 by oyayoi            #+#    #+#             */
+/*   Updated: 2024/07/12 15:28:40 by oyayoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_char(va_list args)
+int	ft_putstr(char *s)
 {
-	char	c;
+	int	i;
 
-	c = va_arg(args, int);
-	write(1, &c, 1);
-	return (1);
+	i = 0;
+	if (!s)
+		return (0);
+	while (s[i])
+	{
+		write(1, &s[i], 1);
+		i++;
+	}
+	return (i);
 }

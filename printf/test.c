@@ -4,7 +4,7 @@ int main(void)
 	int i;
 
 	i = 0;
-	i = printf("%s\n", NULL);
-	printf("i = %d\n", printf("%s\n", "%s\n", "asdfgh", "asdfghjk"));
+	i = printf("aaaaaaaa%saaaaaa\n", NULL);
+	printf("i = %d\n", i);
 	return (0);
 }
