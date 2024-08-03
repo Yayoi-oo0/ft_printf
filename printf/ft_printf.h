@@ -6,12 +6,13 @@
 /*   By: oyayoi <oyayoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 12:30:00 by oyayoi            #+#    #+#             */
-/*   Updated: 2024/07/12 15:01:48 by oyayoi           ###   ########.fr       */
+/*   Updated: 2024/07/14 18:21:52 by oyayoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
+# include "libft/libft.h"
 # include <stdarg.h>
 # include <unistd.h>
 # include <limits.h>
@@ -24,5 +25,6 @@ int	ft_putptr(unsigned long long ptr);
 int	ft_putnbr(int n);
 int	ft_putunbr(unsigned int n);
 int	ft_puthex(unsigned int n, int upper);
+int	ft_putchar(char c);
 
 #endif

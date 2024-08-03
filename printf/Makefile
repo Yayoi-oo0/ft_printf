@@ -1,5 +1,5 @@
 CC  = gcc
-CFLAGS    = -Wall -Wextra -Werror -Iincludes
+CFLAGS    = -Wall -Wextra -Werror
 NAME    = libftprintf.a
 SRCS    = ft_printf.c \
 		ft_check.c \
@@ -7,7 +7,8 @@ SRCS    = ft_printf.c \
 		ft_putnbr.c \
 		ft_putunbr.c \
 		ft_puthex.c \
-		ft_putptr.c
+		ft_putptr.c \
+		ft_putchar.c 
 
 REG_OBJ_FILES = $(SRCS:.c=.o)
 
@@ -15,7 +16,7 @@ OBJS    = $(REG_OBJ_FILES)
 
 all: $(NAME)
 $(NAME): $(OBJS)
-	$(MAKE) -C libft
+	$(MAKE) -C libft/
 	cp libft/libft.a $(NAME)
 	ar -rcs $(NAME) $(OBJS)
 %.o : %.c

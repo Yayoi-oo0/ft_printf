@@ -6,7 +6,7 @@
 /*   By: oyayoi <oyayoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 17:40:34 by oyayoi            #+#    #+#             */
-/*   Updated: 2024/07/12 16:08:04 by oyayoi           ###   ########.fr       */
+/*   Updated: 2024/07/14 18:31:36 by oyayoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_check(const char *str, va_list args)
 		}
 		else
 		{
-			ft_putchar_fd(*str, 1);
+			ft_putchar(*str);
 			count++;
 		}
 		str++;
@@ -40,13 +40,13 @@ int	ft_divide(int str, va_list args)
 
 	count = 0;
 	if (str == 'c')
-		count += ft_putchar_fd(va_arg(args, int), 1);
+		count += ft_putchar(va_arg(args, int));
 	else if (str == 's')
 		count += ft_putstr(va_arg(args, char *));
 	else if (str == 'p')
 		count += ft_putptr(va_arg(args, unsigned long long));
 	else if (str == 'd' || str == 'i')
-		count += ft_putstr(ft_itoa(va_arg(args, int)));
+		count += ft_putnbr(va_arg(args, int));
 	else if (str == 'u')
 		count += ft_putunbr(va_arg(args, unsigned int));
 	else if (str == 'x')
@@ -54,6 +54,6 @@ int	ft_divide(int str, va_list args)
 	else if (str == 'X')
 		count += ft_puthex(va_arg(args, unsigned int), 1);
 	else if (str == '%')
-		count += ft_putchar_fd('%', 1);
+		count += ft_putchar('%');
 	return (count);
 }
