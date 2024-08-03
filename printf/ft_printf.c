@@ -6,7 +6,7 @@
 /*   By: oyayoi <oyayoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 12:22:39 by oyayoi            #+#    #+#             */
-/*   Updated: 2024/07/12 13:01:17 by oyayoi           ###   ########.fr       */
+/*   Updated: 2024/08/03 20:58:08 by oyayoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,3 @@ int	ft_printf(const char *str, ...)
 	return (i);
 }
 
-int	main(void)
-{
-	ft_printf("Hello, World!\n");
-	return (0);
-}
