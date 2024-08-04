@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oyayoi <oyayoi@student.42.fr>              +#+  +:+       +#+        */
+/*   By: okamotoyayoi <okamotoyayoi@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 17:40:34 by oyayoi            #+#    #+#             */
-/*   Updated: 2024/08/03 21:01:25 by oyayoi           ###   ########.fr       */
+/*   Updated: 2024/08/05 00:48:51 by okamotoyayo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,10 @@ int	ft_divide(int str, va_list args)
 		count += ft_putnbr(va_arg(args, int));
 	else if (str == 'u')
 		count += ft_putunbr(va_arg(args, unsigned int));
-	// else if (str == 'x')
-	// 	count += ft_puthex(va_arg(args, unsigned int), 0);
-	// else if (str == 'X')
-	// 	count += ft_puthex(va_arg(args, unsigned int), 1);
+	else if (str == 'x')
+		count += ft_puthex(va_arg(args, unsigned int), 0);
+	else if (str == 'X')
+		count += ft_puthex(va_arg(args, unsigned int), 1);
 	else if (str == '%')
 		count += ft_putchar('%');
 	return (count);

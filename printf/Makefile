@@ -8,7 +8,8 @@ SRCS    = ft_printf.c \
 		ft_putunbr.c \
 		ft_puthex.c \
 		ft_putptr.c \
-		ft_putchar.c 
+		ft_putchar.c \
+		ft_itoa_base.c  
 
 REG_OBJ_FILES = $(SRCS:.c=.o)
 

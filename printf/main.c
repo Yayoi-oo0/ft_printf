@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oyayoi <oyayoi@student.42.fr>              +#+  +:+       +#+        */
+/*   By: okamotoyayoi <okamotoyayoi@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 20:57:52 by oyayoi            #+#    #+#             */
-/*   Updated: 2024/08/03 20:58:46 by oyayoi           ###   ########.fr       */
+/*   Updated: 2024/08/05 00:53:07 by okamotoyayo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	main(void)
 {
-	ft_printf("Hello, World!\n");
-	printf("Hello, World!\n");
+	ft_printf("ft = %x\n", 123);
+	printf("printf = %x\n", 123);
 	return (0);
 }

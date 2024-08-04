@@ -3,30 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oyayoi <oyayoi@student.42.fr>              +#+  +:+       +#+        */
+/*   By: okamotoyayoi <okamotoyayoi@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 19:13:40 by oyayoi            #+#    #+#             */
-/*   Updated: 2024/08/03 21:03:26 by oyayoi           ###   ########.fr       */
+/*   Updated: 2024/08/05 00:54:56 by okamotoyayo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	countdigit(int n)
+int	countdigit_base(int n)
 {
 	int	count;
 
 	count = 0;
 	if (n == 0)
 		return (1);
-	if (n < 0)
-	{
-		n *= -1;
-		count += 1;
-	}
 	while (n > 0)
 	{
-		n /= 10;
+		n /= 16;
 		count++;
 	}
 	return (count);
@@ -35,22 +30,25 @@ int	countdigit(int n)
 char	*ft_itoa_base(unsigned int n, int upper)
 {
 	char	*str;
-
+	char	base[16] = "0123456789abcdef";
+	int		i;
+		
+	i = 0;
+	if (upper)
+	{
+		while(++i < 16)
+			base[i] = ft_toupper(base[i]);
+	}
 	if (n == 0)
 		return (ft_strdup("0"));
-	str = (char *)malloc(sizeof(char) * (countdigit(n) + 1));
+	str = (char *)malloc(sizeof(char) * (countdigit_base(n) + 1));
 	if (!str)
 		return (NULL);
-	str[countdigit(n)] = '\0';
-	if (n < 0)
-	{
-		n *= -1;
-		str[0] = '-';
-	}
+	str[countdigit_base(n)] = '\0';
 	while (n != 0)
 	{
-		str[countdigit(n) - 1] = n % 10 + '0';
-		n /= 10;
+		str[countdigit_base(n) - 1] = base[n % 16];
+		n /= 16;
 	}
 	return (str);
 }
