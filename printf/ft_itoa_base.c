@@ -6,13 +6,13 @@
 /*   By: okamotoyayoi <okamotoyayoi@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 19:13:40 by oyayoi            #+#    #+#             */
-/*   Updated: 2024/08/05 00:54:56 by okamotoyayo      ###   ########.fr       */
+/*   Updated: 2024/08/05 11:00:11 by okamotoyayo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	countdigit_base(int n)
+int	countdigit_base(unsigned long long n)
 {
 	int	count;
 
@@ -27,7 +27,7 @@ int	countdigit_base(int n)
 	return (count);
 }
 
-char	*ft_itoa_base(unsigned int n, int upper)
+char	*ft_itoa_base(unsigned long long n, int upper)
 {
 	char	*str;
 	char	base[16] = "0123456789abcdef";
@@ -36,7 +36,7 @@ char	*ft_itoa_base(unsigned int n, int upper)
 	i = 0;
 	if (upper)
 	{
-		while(++i < 16)
+		while(i++ < 16)
 			base[i] = ft_toupper(base[i]);
 	}
 	if (n == 0)
