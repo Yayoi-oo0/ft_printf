@@ -6,7 +6,7 @@
 /*   By: okamotoyayoi <okamotoyayoi@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 19:13:40 by oyayoi            #+#    #+#             */
-/*   Updated: 2024/08/05 11:00:11 by okamotoyayo      ###   ########.fr       */
+/*   Updated: 2024/08/09 12:25:38 by okamotoyayo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,14 @@ int	countdigit_base(unsigned long long n)
 char	*ft_itoa_base(unsigned long long n, int upper)
 {
 	char	*str;
-	char	base[16] = "0123456789abcdef";
+	char	base[16];
 	int		i;
-		
+
 	i = 0;
+	ft_strlcpy(base, "0123456789abcdef", 17);
 	if (upper)
 	{
-		while(i++ < 16)
+		while (i++ < 16)
 			base[i] = ft_toupper(base[i]);
 	}
 	if (n == 0)

@@ -6,7 +6,7 @@
 /*   By: okamotoyayoi <okamotoyayoi@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 12:30:00 by oyayoi            #+#    #+#             */
-/*   Updated: 2024/08/05 11:01:05 by okamotoyayo      ###   ########.fr       */
+/*   Updated: 2024/08/09 12:15:40 by okamotoyayo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,5 @@ int		ft_putunbr(unsigned int n);
 int		ft_puthex(unsigned int n, int upper);
 int		ft_putchar(char c);
 char	*ft_itoa_base(unsigned long long n, int upper);
-
 
 #endif
