@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okamotoyayoi <okamotoyayoi@student.42.f    +#+  +:+       +#+        */
+/*   By: oyayoi <oyayoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 13:25:37 by oyayoi            #+#    #+#             */
-/*   Updated: 2024/08/05 10:53:11 by okamotoyayo      ###   ########.fr       */
+/*   Updated: 2024/08/11 20:33:48 by oyayoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	ft_putptr(unsigned long long n)
 	char	*str;
 	int		count;
 
+	if (n == 0)
+		return (ft_putstr("(nil)"));
 	str = ft_itoa_base(n, 0);
 	if (!str)
 		return (0);

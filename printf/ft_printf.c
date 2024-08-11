@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okamotoyayoi <okamotoyayoi@student.42.f    +#+  +:+       +#+        */
+/*   By: oyayoi <oyayoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 12:22:39 by oyayoi            #+#    #+#             */
-/*   Updated: 2024/08/09 11:58:39 by okamotoyayo      ###   ########.fr       */
+/*   Updated: 2024/08/11 20:13:20 by oyayoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,6 @@ int	ft_printf(const char *str, ...)
 	va_list		args;
 	int			i;
 
-	i = 0;
-	if (!str)
-		return (-1);
 	va_start(args, str);
 	i = ft_check(str, args);
 	va_end(args);

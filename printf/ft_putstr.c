@@ -6,7 +6,7 @@
 /*   By: oyayoi <oyayoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 13:24:59 by oyayoi            #+#    #+#             */
-/*   Updated: 2024/07/12 15:28:40 by oyayoi           ###   ########.fr       */
+/*   Updated: 2024/08/11 20:22:43 by oyayoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ int	ft_putstr(char *s)
 	int	i;
 
 	i = 0;
-	if (!s)
-		return (0);
+	if (s == NULL)
+		s = "(null)";
 	while (s[i])
 	{
 		write(1, &s[i], 1);
