@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okamotoyayoi <okamotoyayoi@student.42.f    +#+  +:+       +#+        */
+/*   By: oyayoi <oyayoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 17:40:34 by oyayoi            #+#    #+#             */
-/*   Updated: 2024/08/09 12:17:17 by okamotoyayo      ###   ########.fr       */
+/*   Updated: 2024/08/12 14:36:41 by oyayoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_check(const char *str, va_list args)
 	count = 0;
 	while (*str)
 	{
-		if (*str == '%')
+		if (*str == '%' && *(str + 1))
 		{
 			str++;
 			count += ft_divide(*str, args);
@@ -40,11 +40,11 @@ int	ft_divide(int str, va_list args)
 
 	count = 0;
 	if (str == 'c')
-		count += ft_putchar(va_arg(args, int));
+		count += ft_putchar((char)va_arg(args, int));
 	else if (str == 's')
-		count += ft_putstr(va_arg(args, char *));
+		count += ft_putstr((char *)va_arg(args, char *));
 	else if (str == 'p')
-		count += ft_putptr(va_arg(args, unsigned long long));
+		count += ft_putptr((unsigned long long)va_arg(args, unsigned long long));
 	else if (str == 'd' || str == 'i')
 		count += ft_putnbr(va_arg(args, int));
 	else if (str == 'u')

@@ -23,6 +23,7 @@ $(NAME): $(OBJS)
 %.o : %.c
 	$(CC) $(CFLAGS) -c $^ -o $@
 clean:
+	make fclean -C libft/
 	rm -f $(OBJS)
 fclean:clean
 	rm -f $(NAME)
