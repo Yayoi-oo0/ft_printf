@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oyayoi <oyayoi@student.42.fr>              +#+  +:+       +#+        */
+/*   By: okamotoyayoi <okamotoyayoi@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 20:57:52 by oyayoi            #+#    #+#             */
-/*   Updated: 2024/08/13 17:55:04 by oyayoi           ###   ########.fr       */
+/*   Updated: 2024/08/13 19:25:35 by okamotoyayo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int	main(void)
 	j = printf("printf = %s%s%s\n", "abc", "def", "ghi");
 	printf("ft_count = %d\n", i);
 	printf("pr_count = %d\n", j);
+	system("leaks a.out");
 	return (0);
 }
 
