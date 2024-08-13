@@ -6,7 +6,7 @@
 /*   By: oyayoi <oyayoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 17:40:34 by oyayoi            #+#    #+#             */
-/*   Updated: 2024/08/12 14:47:33 by oyayoi           ###   ########.fr       */
+/*   Updated: 2024/08/13 17:54:44 by oyayoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,8 @@ int	ft_divide(int str, va_list args)
 	else if (str == 's')
 		count += ft_putstr((char *)va_arg(args, char *));
 	else if (str == 'p')
-		count += ft_putptr((unsigned long long)va_arg(args, unsigned long long));
+		count += ft_putptr((unsigned long long)va_arg(args,
+					unsigned long long));
 	else if (str == 'd' || str == 'i')
 		count += ft_putnbr((int)va_arg(args, int));
 	else if (str == 'u')
